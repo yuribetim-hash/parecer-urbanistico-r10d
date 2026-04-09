@@ -233,7 +233,6 @@ if st.button("Gerar Parecer"):
     st.download_button(
         label="📄 Baixar Parecer (.docx)",
         data=arquivo,
-        protocolo_limpo = protocolo.replace("/", "-") if protocolo else "sem_protocolo"
-        file_name=f"parecer_{protocolo_limpo}.docx"
+        file_name=f"parecer_{protocolo if protocolo else 'sem_protocolo'}.docx",
         mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     )
