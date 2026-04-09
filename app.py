@@ -155,7 +155,7 @@ context = {
     "setor": setor
     }
 
-    doc.render(context)
+doc.render(context)
 
     buffer = BytesIO()
     doc.save(buffer)
