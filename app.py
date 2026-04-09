@@ -161,7 +161,7 @@ buffer = BytesIO()
 doc.save(buffer)
 buffer.seek(0)
 
-    return buffer
+return buffer
 
 # -------------------------
 # INTERFACE
