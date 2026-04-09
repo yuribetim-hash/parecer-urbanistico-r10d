@@ -124,44 +124,46 @@ def gerar_docx(dados, respostas, observacoes, conclusao, analista, matricula, se
 
             grupos.setdefault(grupo, []).append(texto)
 
-rt = RichText()
-contador = 1
+    # -------------------------
+    # TEXTO COM NEGRITO (RichText)
+    # -------------------------
+    rt = RichText()
+    contador = 1
 
-if grupos:
-    for grupo, itens in grupos.items():
-        # TÍTULO EM NEGRITO
-        rt.add(grupo.upper(), bold=True)
-        rt.add("\n\n")
-
-        for item in itens:
-            rt.add(f"{contador}. {item}")
+    if grupos:
+        for grupo, itens in grupos.items():
+            rt.add(grupo.upper(), bold=True)
             rt.add("\n\n")
-            contador += 1
-else:
-    rt.add("Não foram identificadas inconformidades.")
 
-inconformidades_texto = rt
+            for item in itens:
+                rt.add(f"{contador}. {item}")
+                rt.add("\n\n")
+                contador += 1
+    else:
+        rt.add("Não foram identificadas inconformidades.")
 
-context = {
-    "protocolo": dados["protocolo"],
-    "tipo": dados["tipo"],
-    "interessado": dados["interessado"],
-    "n_lotes": dados["n_lotes"],
-    "inconformidades": inconformidades_texto,
-    "conclusao": conclusao,
-    "data": f"Data: {datetime.now().strftime('%d/%m/%Y')}",
-    "analista": f"Analista: {analista}",
-    "matricula": matricula,
-    "setor": setor
+    inconformidades_texto = rt
+
+    context = {
+        "protocolo": dados["protocolo"],
+        "tipo": dados["tipo"],
+        "interessado": dados["interessado"],
+        "n_lotes": dados["n_lotes"],
+        "inconformidades": inconformidades_texto,
+        "conclusao": conclusao,
+        "data": f"Data: {datetime.now().strftime('%d/%m/%Y')}",
+        "analista": f"Analista: {analista}",
+        "matricula": matricula,
+        "setor": setor
     }
 
-doc.render(context)
+    doc.render(context)
 
-buffer = BytesIO()
-doc.save(buffer)
-buffer.seek(0)
+    buffer = BytesIO()
+    doc.save(buffer)
+    buffer.seek(0)
 
-return buffer
+    return buffer
 
 # -------------------------
 # INTERFACE
