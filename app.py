@@ -124,7 +124,7 @@ def gerar_docx(dados, respostas, observacoes, conclusao, analista, matricula, se
 
             grupos.setdefault(grupo, []).append(texto)
 
-   rt = RichText()
+rt = RichText()
 contador = 1
 
 if grupos:
