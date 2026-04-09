@@ -1,0 +1,95 @@
+GRUPO: PRÉ ANÁLISE
+ID: pre_perimetro
+PERGUNTA: O imóvel se projeta sobre área rural?
+OPCOES: Sim;Não
+REGRA_Sim: O projeto de parcelamento do solo com finalidade urbana somente poderá se projetar sobre o perímetro urbano municipal.
+
+GRUPO: PRÉ ANÁLISE
+ID: pre_doc_min
+PERGUNTA: Apresentou documentação mínima?
+OPCOES: Sim;Não
+REGRA_Não: Apresentar consultas de viabilidade deferidas, dentro do prazo de validade, matrícula atualizada (90 dias), planta do projeto proposto;
+
+GRUPO: VIABILIDADES
+ID: viab_urb_comp
+PERGUNTA: Apresentou consulta de viabilidade urbanística compatível ao projeto pleiteado?
+OPCOES: Não;Sim
+REGRA_Não: Deverá apresentar projeto urbanístico compatível com a consulta de viabilidade deferida.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_prazo
+PERGUNTA: Apresentou consulta de viabilidade urbanística com prazo vigente?
+OPCOES: Não;Sim
+REGRA_Não: A consulta de viabilidade urbanística encontra-se vencida. Deverá proceder com a renovação junto à comissão responsável.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_lotes
+PERGUNTA: A consulta de viabilidade urbanística apresenta o mesmo número de lotes do projeto proposto?
+OPCOES: Não;Sim
+REGRA_Não: A consulta de viabilidade urbanística não abrange o número total de lotes do projeto. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_tipo
+PERGUNTA: A consulta de viabilidade e o projeto são do mesmo tipo de empreendimento?
+OPCOES: Não;Sim
+REGRA_Não: A consulta de viabilidade urbanística e o projeto não se referem ao mesmo tipo de empreendimento.
+
+GRUPO: VIABILIDADES
+ID: viab_urb_cond
+PERGUNTA: Existe alguma condicionante na viabilidade urbanística que deva ser considerada?
+OPCOES: Não;Sim
+REGRA_Sim: A consulta de viabilidade urbanística apresenta condicionantes que deverão ser cumpridas.
+
+GRUPO: VIABILIDADES
+ID: viab_ele_lotes
+PERGUNTA: A viabilidade elétrica apresenta o mesmo número de lotes do projeto?
+OPCOES: Não;Sim
+REGRA_Não: A viabilidade elétrica não abrange o número total de lotes do projeto. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_ele_cond
+PERGUNTA: Existe alguma condicionante na viabilidade elétrica?
+OPCOES: Não;Sim
+REGRA_Sim: A viabilidade elétrica apresenta condicionantes que deverão ser cumpridas.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_comp
+PERGUNTA: Apresentou viabilidade de abastecimento de água compatível ao projeto?
+OPCOES: Não;Sim
+REGRA_Não: A viabilidade de abastecimento de água e o projeto diferem. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_lotes
+PERGUNTA: A viabilidade de abastecimento de água apresenta o mesmo número de lotes do projeto?
+OPCOES: Não;Sim
+REGRA_Não: A viabilidade de abastecimento de água não abrange o número total de lotes do projeto. Deverá proceder com a compatibilização.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_prazo
+PERGUNTA: A viabilidade de abastecimento de água está dentro do prazo de validade?
+OPCOES: Não;Sim
+REGRA_Não: A viabilidade de abastecimento de água encontra-se vencida. Deverá solicitar renovação.
+
+GRUPO: VIABILIDADES
+ID: viab_abast_cond
+PERGUNTA: Existe alguma condicionante na viabilidade de abastecimento de água?
+OPCOES: Não;Sim
+REGRA_Sim: A viabilidade de abastecimento de água apresenta condicionantes que deverão ser cumpridas.
+
+GRUPO: DOCUMENTAL
+ID: doc_matricula
+PERGUNTA: Apresentou matrícula(s) do empreendimento atualizada (90 dias)?
+OPCOES: Não;Sim
+REGRA_Não: Deverá apresentar matrícula(s) atualizada(s) do empreendimento (90 dias).
+
+GRUPO: DOCUMENTAL
+ID: doc_matricula_comp
+PERGUNTA: Apresentou matrícula(s) do empreendimento compatível entre projeto e viabilidade?
+OPCOES: Não;Sim
+REGRA_Não: A(s) matrícula(s) informada(s) em viabilidade e/ou projeto proposto não são compatíveis. Proceder com a correção.
+
+GRUPO: INFRAESTRUTURA
+ID: infra_rede_agua
+PERGUNTA: Projeto de rede de água aprovado?
+OPCOES: Sim;Não
+REGRA_Não: Apresentar projeto de rede de água aprovado pelo órgão competente.
