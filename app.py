@@ -157,9 +157,9 @@ context = {
 
 doc.render(context)
 
-    buffer = BytesIO()
-    doc.save(buffer)
-    buffer.seek(0)
+buffer = BytesIO()
+doc.save(buffer)
+buffer.seek(0)
 
     return buffer
 
