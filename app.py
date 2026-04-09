@@ -142,17 +142,17 @@ else:
 
 inconformidades_texto = rt
 
-    context = {
-        "protocolo": dados["protocolo"],
-        "tipo": dados["tipo"],
-        "interessado": dados["interessado"],
-        "n_lotes": dados["n_lotes"],
-        "inconformidades": inconformidades_texto,
-        "conclusao": conclusao,
-        "data": f"Data: {datetime.now().strftime('%d/%m/%Y')}",
-        "analista": f"Analista: {analista}",
-        "matricula": matricula,
-        "setor": setor
+context = {
+    "protocolo": dados["protocolo"],
+    "tipo": dados["tipo"],
+    "interessado": dados["interessado"],
+    "n_lotes": dados["n_lotes"],
+    "inconformidades": inconformidades_texto,
+    "conclusao": conclusao,
+    "data": f"Data: {datetime.now().strftime('%d/%m/%Y')}",
+    "analista": f"Analista: {analista}",
+    "matricula": matricula,
+    "setor": setor
     }
 
     doc.render(context)
